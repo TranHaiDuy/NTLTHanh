@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thị Lan Thanh</title>
+    
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    
+    <header>
+        <div class="container">
+            <div class="content__header">
+                <div class="logo__header">
+                    <img src="data:image/png;base64,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" alt="">
+                </div>
+                <div class="menu__header">
+                    <nav>
+                        <ul class="nav__link">
+                            <li><a href="">Trang chủ</a></li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Sản phẩm</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="login-header">
+                   <button class="login">
+                       Đăng nhập
+                   </button>
+                   <button class="register">Đăng ký</button>
+                </div>
+                <div class="card__head">
+                    <div class="card" id="popup_card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYan6kUfiK7y5rNWt6oSTk-FXUIugNXmOOw&usqp=CAU" alt="">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDvo1bAKJJnodncjWI_HAjg9hq1hlZg1SdA&usqp=CAU" alt="">
+    </div>
+    <section class="slide__body">
+        <div class="container">
+            <div class="container_slide">
+                <div class="slides">        
+                </div>
+        </div>
+    </section>
+   
+    <section class="body_product">
+        <div class="container">
+            <div class="title"><h3>Sản phẩm bán chạy</h3></div>
+            <div class="show_product">
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/gd0000y000833-day-chuyen-vang-18k-pnj.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Dây chuyền vàng 18k PNJ </h3>
+                            <p>30.465.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/gd0000w000268-day-chuyen-vang-trang-18k-pnj-01.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Dây chuyền Vàng trắng Ý 18k PNJ </h3>
+                            <p>8.624.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/sp-gd0000w000233-day-chuyen-vang-trang-y-18k-pnj-1.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Dây chuyền Vàng trắng 18k PNJ </h3>
+                            <p>22.030.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/gd0000w000220-day-chuyen-vang-trang-10k-pnj-01.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Dây chuền Vàng trắng 10k PNJ </h3>
+                            <p>1.613.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/sp-gd0000w000199-day-chuyen-kim-cuong-vang-trang-10k-pnj-1.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Dây chuyền Vàng trắng 10k PNJ </h3>
+                            <p>1.383.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/1-KHUNG-SP-6676612-550872714.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Casio - Nam AE-1200WHD-1AVDF  </h3>
+                            <p>1.120.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/1-KHUNG-SP-273344088-1112937939.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Casio - Nam MTP-1384L-1AVDF </h3>
+                            <p>1.790.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/1-KHUNG-SP-1532624174-348523262.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Casio - Nam MTP-1375D-1AVDF </h3>
+                            <p>1.790.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/2-1642420283747.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Casio - Nam MTP-1215A-7ADF  </h3>
+                            <p>850.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/A178WA-1ADF.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Casio - Nam A178WA-1ADF </h3>
+                            <p>620.000 đ</p>
+                        </div>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <section class="body_product discount">
+        <div class="container">
+            <div class="title"><h3>Sản phẩm khuyến mãi</h3></div>
+            <div class="show_product">
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/nkc1009-1-yGPUnY8ISB.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Nhẫn Kim Cương Solitaire Custom NKC1009 </h3>
+                            <span><s>50.990.000đ</s></span>
+                            <span>43.341.500đ</span>
+                        </div>
+                        <span class="discount">15%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/nkc0009_1-1--jm42lMcjzZ.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Nhẫn Kim Cương Solitaire Custom NKC1100 </h3>
+                            <span><s>44.160.000đ</s></span>
+                            <span>37.750.000đ</span>
+                        </div>
+                        <span class="discount">25%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/nch1316-4-pPs0Faxmcb.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Nhẫn cầu hôn Solitaire Scarf NKC1316 </h3>
+                            <span><s>19.490.000</s></span>
+                            <span>17.460.000đ</span>
+                        </div>
+                        <span class="discount">25%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/nkc0005_1-BhtdYcaDZb.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Nhẫn kim cương Wide Band NKC0005 </h3>
+                            <span><s>55.850.000đ</s></span>
+                            <span>47.472.500đ</span>
+                        </div>
+                        <span class="discount">10%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/khuyen-tai-tron-40-86eabcba-7364-42ff-8dbd-4eb5e50d1c7a.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Khuyên Tai Tròn 0095 </h3>
+                            <span><s>340.000đ</s></span>
+                            <span>280.000đ</span>
+                        </div>
+                        <span class="discount">15%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/khuyen-tai-tron-41d.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>Khuyên Tai Tròn 0063 </h3>
+                            <span><s>270.000đ</s></span>
+                            <span>190.000đ</span>
+                        </div>
+                        <span class="discount">25%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/compressed-editted-cropbi-2311-2-111-1.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>ANK MULTI BIG HEART TAG </h3>
+                            <span><s>550.000đ</s></span>
+                            <span>450.000đ</span>
+                        </div>
+                        <span class="discount">20%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/compressed-crop0213-1-copy.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>ANK BIG STAR AND TINY STAR GEM</h3>
+                            <span><s>450.000đ</s></span>
+                            <span>375.000đ</span>
+                        </div>
+                        <span class="discount">25%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/compressed-editted-cropbi-2311-2-115-3-3776ea80-261b-4852-87e9-7bddbdceb463.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>ANK 4 BUBBLE FLOWER GEM </h3>
+                            <span><s>700.000đ</s></span>
+                            <span>560.000đ</span>
+                        </div>
+                        <span class="discount">20%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="items">
+                        <div class="image">
+                            <img src="img/danen-cropbi-2211-2-033-1.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>ANK MULTI SNOWFLAKE GEM DOUBLE OVAL CHAIN BLUE STONE </h3>
+                            <span><s>750.000đ</s></span>
+                            <span>550.500đ</span>
+                        </div>
+                        <span class="discount">15%</span>
+                        <div class="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="button">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h3 class="name_website">LUCKY START</h3>
+                    <div>
+                        <img src="uploads/Group.png" alt="">
+                    </div>
+                    <p>
+                      <h4>Nền Tảng Cho Sự Thăng Hoa</h4>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <h3 class="title">TRUY CẬP NHANH</h3>
+                    <ul>
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="">Tin tức</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4">
+                    <h3 class="title">HỖ TRỢ KHÁCH HÀNG</h3>
+                    <ul>
+                        <li><a href="">Chính sách thanh toán</a></li>
+                        <li><a href="">Chính sách bảo hành</a></li>
+                        <li><a href="">Chính sách đổi trả hàng</a></li>
+                        <li><a href="">Chính sách vận chuyển</a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="copyriht">WEBSITE DESIGN BY VIETTIN</p>
+    </footer>
+
+
+</body>
+</html>
